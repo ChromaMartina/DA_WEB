@@ -1,0 +1,149 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*
+	BARVY
+	sede pozadi      #e5e5e5
+	svetle fialova   #48418e
+	tmave fialova    #25133d
+
+	POUZITE PISMO
+	Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
+	https://fonts.google.com/specimen/Roboto
+	Písmo už je v HTML nalinkované a v CSS nastavené pro body.
+*/
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #e5e5e5;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.obal {
+  /* obsah stránky je omezený do pruhu širokého 960px */
+  width: 960px;
+
+  /* pruh je na stránce vycentrovaný */
+  margin: 0 auto;
+
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: #25133d;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-weight: 700;
+  display: block;
+  padding: 15px 30px;
+}
+
+nav li a:hover {
+  background-color: #48418e;
+  color: white;
+}
+
+header {
+  background-image: url('images/pozadi.jpg');
+  background-size: cover;
+  padding: 60px 420px 60px 40px;
+  min-height: 450px;
+  position: relative;
+}
+
+header h1 {
+  color: white;
+  font-size: 90px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+}
+
+header p {
+  color: white;
+  font-size: 36px;
+  font-weight: 300;
+  margin: 50px 0px;
+  line-height: 1.2;
+}
+
+header img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-left: 5px;
+}
+
+header a {
+  display: inline-block;
+  color: white;
+  padding: 10px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+header a:hover {
+  background-color: #48418e;
+  color: white;
+}
+
+main {
+  display: flex;
+}
+
+article {
+  text-align: center;
+  padding: 30px 30px;
+}
+
+article h2 {
+  color: #48418e;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+article img {
+  width: 50px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  background-color: #48418e;
+  padding: 5px 0;
+}
